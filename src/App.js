@@ -14,7 +14,11 @@ function App() {
     setIdade(idade);
   });
 
-  connection.start().then(() => connection.invoke("EnviarIdade", "Hello"));
+  try {
+    connection.start();
+  } catch (err) {
+    console.log(err);
+  }
 
   return (
     <div className="App">
