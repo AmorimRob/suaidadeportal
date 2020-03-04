@@ -1,23 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { HubConnectionBuilder } from '@aspnet/signalr';
 
 function App() {
+
+  const [idade, setIdade] = useState("?");
+
+  let connection = new HubConnectionBuilder()
+    .withUrl("https://localhost:5001/faceHub")
+    .build();
+
+  connection.on('IdentificarIdade', (idade) => {
+    console.log(idade);
+    setIdade(idade)
+  });
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src='https://media.giphy.com/media/XujzWKelSd5S/giphy.gif' alt="gif" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Sua idade 
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p className="App-idade">
+        {idade}
+        </p>
+        <p>
+        ¯\_(ツ)_/¯
+        </p>
       </header>
     </div>
   );

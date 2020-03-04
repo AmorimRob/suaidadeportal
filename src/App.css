@@ -28,11 +28,18 @@
   color: #61dafb;
 }
 
+.App-idade {
+  font-size:3em;
+  margin: 0em;
+  color: skyblue;
+  font-weight: bolder;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(10000deg);
   }
 }
