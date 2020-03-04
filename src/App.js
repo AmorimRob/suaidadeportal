@@ -6,7 +6,7 @@ function App() {
   const [idade, setIdade] = useState("?");
 
   let connection = new HubConnectionBuilder()
-    .withUrl("http://suaidadeserver.azurewebsites.net/faceHub")
+    .withUrl("https://suaidadeserver.azurewebsites.net/faceHub")
     .build();
 
   connection.on("IdentificarIdade", idade => {
@@ -14,7 +14,7 @@ function App() {
     setIdade(idade);
   });
 
-  connection.start().then(() => connection.invoke("IdentificarIdade", "Hello"));
+  connection.start().then(() => connection.invoke("EnviarIdade", "Hello"));
 
   return (
     <div className="App">
