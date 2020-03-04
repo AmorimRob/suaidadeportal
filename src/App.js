@@ -26,6 +26,8 @@ function App() {
         <img
           src="https://media.giphy.com/media/XujzWKelSd5S/giphy.gif"
           alt="gif"
+          width="600"
+          height="300"
         />
         <p>Sua idade...</p>
         <p className="App-idade">{idade}</p>
