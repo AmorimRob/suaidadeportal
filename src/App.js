@@ -27,7 +27,7 @@ function App() {
           src="https://media.giphy.com/media/XujzWKelSd5S/giphy.gif"
           alt="gif"
         />
-        <p>Sua idade</p>
+        <p>Sua idade...</p>
         <p className="App-idade">{idade}</p>
         <p>¯\_(ツ)_/¯</p>
       </header>
