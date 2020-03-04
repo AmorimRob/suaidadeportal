@@ -16,7 +16,7 @@ function App() {
   });
 
   connection.start()
-  .then(() => connection.invoke("send", "Hello"));
+  .then(() => connection.invoke("IdentificarIdade", "Hello"));
 
   return (
     <div className="App">
